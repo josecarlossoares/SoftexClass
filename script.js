@@ -225,8 +225,35 @@ const readline = require('readline-sync');
 //     return res
 // }
 
+
 // let duracao = duracaoJogo(horaInicio, horaTermino)
 // console.log(`A duração é ${duracao} minutos.`)
+
+//===========================================================
+let horaInicio = 0
+let horaTermino = 0
+
+    horaInicio = readline.question('Informe a hora de inicio. (hh:mm)')
+    horaTermino = readline.question('Digite a hora de termino. (hh:mm)')
+
+
+let tempoIni = horaInicio.split(':')
+let tempoTer = horaTermino.split(':')
+
+function duracaoJogo(horaI, horaT, minI, minT){
+    let hora = parseInt(horaT - horaI)
+    let min = parseInt(minT - minI)
+    hora = hora * 60
+
+    let res = hora + min
+
+    return res
+}
+
+let duracao = duracaoJogo(tempoIni[0], tempoTer[0], tempoIni[1], tempoTer[1]);
+console.log(`A duração é ${duracao} minutos.`)
+
+//==========================================================================
 
 
 //Decima terceira
