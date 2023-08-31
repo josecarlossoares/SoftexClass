@@ -232,13 +232,26 @@ const readline = require('readline-sync');
 //===========================================================
 let horaInicio = 0
 let horaTermino = 0
+let tempoIni, tempoTer
+let horaIniTest
+let minIniTest
+let horaTerTest
+let minTerTest
 
+do{
     horaInicio = readline.question('Informe a hora de inicio. (hh:mm)')
     horaTermino = readline.question('Digite a hora de termino. (hh:mm)')
 
+    tempoIni = horaInicio.split(':')
+    tempoTer = horaTermino.split(':')
 
-let tempoIni = horaInicio.split(':')
-let tempoTer = horaTermino.split(':')
+    
+    horaIniTest = parseInt(tempoIni[0])
+    minIniTest = parseInt(tempoIni[1])
+    horaTerTest = parseInt(tempoTer[0])
+    minTerTest = parseInt(tempoTer[1])
+
+}while(horaIniTest >= 24 || minIniTest >= 60 || horaTerTest >= 24 || minTerTest >= 60)
 
 function duracaoJogo(horaI, horaT, minI, minT){
     let hora = parseInt(horaT - horaI)
@@ -246,6 +259,7 @@ function duracaoJogo(horaI, horaT, minI, minT){
     hora = hora * 60
 
     let res = hora + min
+    res = Math.abs(res)
 
     return res
 }
