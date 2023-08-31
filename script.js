@@ -98,7 +98,7 @@ const readline = require('readline-sync');
 // let time = new Date('August 29, 2023 10:00:00')
 // let hora = readline.questionInt('Informe a hora de inicio.')
 // time.setHours(hora)
-// let minutos = readline.questionInt('Informe quatos minutos de duração.')
+// let minutos = readline.questionInt('Informe quantos minutos de duração.')
 // time.setMinutes(minutos)
 
 // console.log(`O teste va terminar as ${time}`)
