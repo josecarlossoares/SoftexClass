@@ -253,15 +253,16 @@ do{
 }while(horaIniTest >= 24 || minIniTest >= 60 || horaTerTest >= 24 || minTerTest >= 60)
 
 function duracaoJogo(horaI, horaT, minI, minT){
-    let hora = parseInt(horaT - horaI)
-    let min = parseInt(minT - minI)
+ //corrigir, (1440 - horaI) para calcular corretamente ao chegar a meia noite
+    let horaTotal = horaT - horaI
+    let minTotal = minT - minI
 
-    min = Math.abs(min)
-    hora = Math.abs(hora)
-    hora = hora * 60
+    minTotal = Math.abs(mintotal)
+    horaTotal = Math.abs(horaTotal)
+    horaTotal = horaTotal * 60
 
 
-    let res = hora + min
+    let res = horaTotal + minTotal
 
     if(res >= 1440){
         console.log('O jogo não pode durar mais de 24 horas')
