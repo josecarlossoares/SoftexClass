@@ -178,5 +178,65 @@ const readline = require('readline-sync');
 //         console.log('Erro')
 // }
 
+//Decima primeira
+// let mes = readline.question('Digite um mês.')
+// let ano = readline.questionInt('Agora digite um ano.')
+// const meses = {
+//     janeiro: 31,
+//     fevereiro: 28,
+//     marco: 31,
+//     abril: 30,
+//     maio: 31,
+//     junho: 30,
+//     julho: 31,
+//     agosto: 31,
+//     setembro: 30,
+//     outubro: 31,
+//     novembro: 30,
+//     dezembro: 31
+// }
+// function insiraMes (mes, ano){
+//     if(ano % 4 === 0 && ano % 100 !== 0){
+//         meses.fevereiro = 29
+//     }
+//     for (let index in meses){
+//         if(mes == index){
+//             return meses[index]
+//         }
+//     }
+// }
+// let dias = insiraMes(mes, ano);
+// console.log(dias)
+
+//Decima segunda
+// let horaInicio = 0
+// let horaTermino = 0
+// do{
+//     horaInicio = readline.questionInt('Informe a hora de inicio.')
+//     horaTermino = readline.questionInt('Digite a hora de termino.')
+
+// }while(horaTermino >= 24 || horaTermino < 0 || horaInicio >= 24 || horaInicio < 0)
+
+// function duracaoJogo(horaI, horaT){
+//     let res = (horaTermino - horaInicio) * 60
+//     if(res < 0){
+//         res = Math.abs(res)
+//     }
+//     return res
+// }
+
+// let duracao = duracaoJogo(horaInicio, horaTermino)
+// console.log(`A duração é ${duracao} minutos.`)
 
 
+//Decima terceira
+// function fibo(n){
+//     if(n < 2){
+//         return n;
+//     }else{
+//         return fibo(n-1) + fibo(n-2)
+//     }
+// }
+
+// let res = fibo(5)
+// console.log(res)
