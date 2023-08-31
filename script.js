@@ -237,7 +237,6 @@ let horaIniTest
 let minIniTest
 let horaTerTest
 let minTerTest
-
 do{
     horaInicio = readline.question('Informe a hora de inicio. (hh:mm)')
     horaTermino = readline.question('Digite a hora de termino. (hh:mm)')
@@ -256,12 +255,20 @@ do{
 function duracaoJogo(horaI, horaT, minI, minT){
     let hora = parseInt(horaT - horaI)
     let min = parseInt(minT - minI)
+
+    min = Math.abs(min)
+    hora = Math.abs(hora)
     hora = hora * 60
 
-    let res = hora + min
-    res = Math.abs(res)
 
-    return res
+    let res = hora + min
+
+    if(res >= 1440){
+        console.log('O jogo não pode durar mais de 24 horas')
+    }else{
+        return res
+    }
+
 }
 
 let duracao = duracaoJogo(tempoIni[0], tempoTer[0], tempoIni[1], tempoTer[1]);
